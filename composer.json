@@ -26,6 +26,10 @@
         {
             "type": "composer",
             "url": "https://packagist.drupal-composer.org"
+        },
+        {
+            "type": "vcs",
+            "url":  "https://github.com/dakala/fullcalendar.git"
         }
     ],
     "scripts": {
