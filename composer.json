@@ -20,7 +20,8 @@
         "composer/installers": "^1.0",
         "drupal-composer/drupal-scaffold": "^2.0.0",
         "cweagans/composer-patches": "1.5.0",
-        "drupal/phpedu_profile": "^8.1.0"
+        "drupal/phpedu_profile": "^8.1.0",
+        "dakala/fullcalendar": "dev-8.x-1.x"
     },
     "repositories": [
         {
@@ -29,7 +30,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/dakala/fullcalendar"
+            "url": "https://github.com/dakala/fullcalendar.git"
         }
     ],
     "scripts": {
