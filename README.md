@@ -1,4 +1,4 @@
-This is a Composer-based installer for the [PhpEdu](https://www.drupal.org/project/phpedu_profile) Drupal distribution. It is an extension of the excellent [Lightning](https://www.drupal.org/project/lightning) distribution.
+This is a Composer-based installer for the [PhpEdu](https://www.drupal.org/project/phpedu_profile) Drupal distribution. It is an derived from the [Lightning](https://www.drupal.org/project/lightning) distribution.
 
 ## Get Started
 You will need the following installed:
