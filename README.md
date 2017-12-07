@@ -1,4 +1,4 @@
-This is a Composer-based installer for the [PhpEdu](https://www.drupal.org/project/phpedu_profile) Drupal distribution. It is an extension of the excellent [Lightning](https://www.drupal.org/project/lightning) distribution.
+This is a Composer-based installer for the [PhpEdu](https://www.drupal.org/project/phpedu_profile) Drupal distribution. It is derived from the [Lightning](https://www.drupal.org/project/lightning) distribution.
 
 ## Get Started
 You will need the following installed:
@@ -8,28 +8,23 @@ You will need the following installed:
 
 When you have those, run this command:
 ```
-$ composer create-project dakala/phpedu-project:^8.1.0 MY_PROJECT --no-interaction
+$ composer create-project dakala/phpedu-project:8.x-dev MY_PROJECT --no-interaction
 ```
 Composer will create a new directory called MY_PROJECT containing a ```docroot``` directory with a full PhpEdu code base therein. You can then install it like you would any other Drupal site.
 
 ## Maintenance
-```drush make```, ```drush pm-download```, ```drush pm-update``` and their ilk are the old-school way of maintaining your code base. Forget them. You're in Composer land now!
 
-Let this handy table be your guide:
+Use this table as your guide to maintaining your code base with Composer:
 
-| Task                                            | Drush                                         | Composer                                          |
-|-------------------------------------------------|-----------------------------------------------|---------------------------------------------------|
-| Installing a contrib project (latest version)   | ```drush pm-download PROJECT```               | ```composer require drupal/PROJECT:8.*```         |
-| Installing a contrib project (specific version) | ```drush pm-download PROJECT-8.x-1.0-beta3``` | ```composer require drupal/PROJECT:8.1.0-beta3``` |
-| Updating all contrib projects and Drupal core   | ```drush pm-update```                         | ```composer update```                             |
-| Updating a single contrib project               | ```drush pm-update PROJECT```                 | ```composer update drupal/PROJECT```              |
-| Updating Drupal core                            | ```drush pm-update drupal```                  | ```composer update drupal/core```                 |
+| Task                                            | Composer                                          |
+|-------------------------------------------------|---------------------------------------------------|
+| Installing a contrib project (latest version)   | ```composer require drupal/PROJECT:8.*```         |
+| Installing a contrib project (specific version) | ```composer require drupal/PROJECT:8.1.0-beta3``` |
+| Updating all contrib projects and Drupal core   | ```composer update```                             |
+| Updating a single contrib project               | ```composer update drupal/PROJECT```              |
+| Updating Drupal core                            | ```composer update drupal/core```                 |
 
-Not too tricky, eh?
-
-The magic is that Composer, unlike Drush, is a *dependency manager*. If module ```foo-8.x-1.0``` depends on ```baz-8.x-3.2```, Composer will not let you update baz to ```8.x-3.3``` (or downgrade it to ```8.x-3.1```, for that matter). Drush has no concept of dependency management. If you've ever accidentally hosed a site because of dependency issues like this, you've probably already realized how valuable Composer can be.
-
-But to be clear: **you still need Drush**. Tasks such as database updates (```drush updatedb```) are still firmly in Drush's province, and it's awesome at that stuff. This installer will install a copy of Drush (local to the project) in the ```bin``` directory.
+Composer is a *dependency manager*. If module ```foo-8.x-1.0``` depends on ```baz-8.x-3.2```, Composer will not let you update baz to ```8.x-3.3``` (or downgrade it to ```8.x-3.1```, for that matter).
 
 **Composer is only responsible for maintaining the code base**.
 
