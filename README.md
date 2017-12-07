@@ -17,7 +17,7 @@ Composer will create a new directory called MY_PROJECT containing a ```docroot``
 Use this table as your guide to maintaining your code base with Composer:
 
 | Task                                            | Composer                                          |
-|-----------------------------------------------------------------------------------------------------|
+|-------------------------------------------------|---------------------------------------------------|
 | Installing a contrib project (latest version)   | ```composer require drupal/PROJECT:8.*```         |
 | Installing a contrib project (specific version) | ```composer require drupal/PROJECT:8.1.0-beta3``` |
 | Updating all contrib projects and Drupal core   | ```composer update```                             |
