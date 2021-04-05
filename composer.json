@@ -29,7 +29,7 @@
     "require": {
         "drupal/core-composer-scaffold": "~8.8.1",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/phpedu_profile": "dev-8.x-1.x",
+        "drupal/phpedu_profile": "dev-1.x",
         "drupal/core": "~8.4.0"
     },
     "repositories": [
