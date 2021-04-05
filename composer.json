@@ -27,7 +27,7 @@
         "drupal/console": "1.0.1"
     },
     "require": {
-        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "drupal-composer/drupal-scaffold": "~2.6.1",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/phpedu_profile": "1.x-dev",
         "drupal/core": "~8.4.0"
