@@ -11,20 +11,6 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
-   "require-dev": {
-        "drupal/drupal-extension": "~3.3.0",
-        "drupal/coder": "8.*",
-        "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "~2.8",
-        "composer/composer": "^1.3",
-        "drush/drush": "^9.0"
-    },
-    "require": {
-        "drupal/core-composer-scaffold": "~8.8.1",
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/phpedu_profile": "dev-1.x",
-        "drupal/core": "~8.4.0"
-    },
     "repositories": [
         {
             "type": "composer",
@@ -44,6 +30,11 @@
         "bin-dir": "bin/"
     },
     "extra": {
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            }
+        },
         "installer-types": [
             "bower-asset",
             "npm-asset"
@@ -52,13 +43,11 @@
             "docroot/core": [
                 "type:drupal-core"
             ],
-            "docroot/libraries/{$name}": [
-                "type:drupal-library",
-                "type:bower-asset",
-                "type:npm-asset"
-            ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/phpedu": [
+                "dakala/phpedu_profile"
             ],
             "docroot/profiles/contrib/{$name}": [
                 "type:drupal-profile"
@@ -66,10 +55,26 @@
             "docroot/themes/contrib/{$name}": [
                 "type:drupal-theme"
             ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
             ]
         },
         "enable-patching": true
+    },
+    "require": {
+        "drupal/core-composer-scaffold": "~8.8.1",
+        "cweagans/composer-patches": "^1.6.0",
+        "drupal/phpedu_profile": "dev-1.x",
+        "drupal/core": "~8.4.0"
+    },
+    "require-dev": {
+        "drupal/drupal-extension": "~3.3.0",
+        "drupal/coder": "8.*",
+        "phpunit/phpunit": "~4.8"
     }
 }
