@@ -1,6 +1,6 @@
 {
     "name": "dakala/phpedu-project",
-    "description": "Project template for Drupal 8 sites built with the PhpEdu distribution.",
+    "description": "Project template for Drupal sites built with the PhpEdu distribution.",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
@@ -11,18 +11,8 @@
     ],
     "minimum-stability": "dev",
     "prefer-stable": true,
-   "require-dev": {
-        "drupal/drupal-extension": "~3.3.0",
-        "drupal/coder": "8.*",
-        "phpunit/phpunit": "~4.8",
-        "composer/composer": "^1.3",
-        "drush/drush": "^9.0"
-    },
     "require": {
-        "drupal/core-composer-scaffold": "~8.8.1",
-        "cweagans/composer-patches": "^1.6.0",
-        "drupal/phpedu_profile": "dev-1.x",
-        "drupal/core": "~8.9.0"
+        "drupal/phpedu_profile": "dev-1.x"
     },
     "repositories": [
         {
@@ -43,8 +33,10 @@
         "bin-dir": "bin/"
     },
     "extra": {
-        "locations": {
-            "web-root": "docroot/"
+        "drupal-scaffold": {
+            "locations": {
+                "web-root": "docroot/"
+            }
         },
         "installer-types": [
             "bower-asset",
@@ -75,6 +67,9 @@
                 "type:drupal-drush"
             ]
         },
-        "enable-patching": true
+        "enable-patching": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        }
     }
 }
