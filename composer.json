@@ -52,7 +52,7 @@
         ],
         "installer-paths": {
             "docroot/core": [
-                "type:drupal-core"
+                "drupal/core"
             ],
             "docroot/libraries/{$name}": [
                 "type:drupal-library",
@@ -61,6 +61,9 @@
             ],
             "docroot/modules/contrib/{$name}": [
                 "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/phpedu": [
+                "dakala/phpedu_profile"
             ],
             "docroot/profiles/contrib/{$name}": [
                 "type:drupal-profile"
