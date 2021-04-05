@@ -24,14 +24,6 @@
             "url": "https://asset-packagist.org"
         }
     ],
-    "scripts": {
-      "post-install-cmd": [
-        "@composer drupal:scaffold"
-      ]
-    },
-    "config": {
-        "bin-dir": "bin/"
-    },
     "extra": {
         "drupal-scaffold": {
             "locations": {
