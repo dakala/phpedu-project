@@ -23,9 +23,8 @@
     ],
     "scripts": {
         "post-install-cmd": [
-            "@composer drupal-scaffold"
-        ],
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+            "@composer drupal:scaffold"
+        ]
     },
     "config": {
         "bin-dir": "bin/"
